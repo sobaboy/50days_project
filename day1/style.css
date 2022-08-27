@@ -30,7 +30,7 @@ body {
   flex: .5;
   margin: 10px;
   position: relative;
-  transition: flex .7s ease-in;
+  transition: flex .3s ease-in;
 }
 .panel h3{
   font-size: 24px;
@@ -41,6 +41,7 @@ body {
   opacity: 0;
 }
 
+/* 패널 클릭 시 창 변화 */
 .panel.active {
     flex: 5;
 }
@@ -58,3 +59,5 @@ body {
     display: none;
   }
 }
+
+/* 동적으로 변하는 부분은 따로 관리하면 안되나? */
