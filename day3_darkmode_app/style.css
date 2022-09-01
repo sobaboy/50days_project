@@ -126,7 +126,7 @@ h1 {
 footer {
   width: 100%;
   height: 10vh;
-  background: var(--color-dark);
+  background: var(--foreground);
   color: var(--background);
   display: flex;
   justify-content: center;
