@@ -43,7 +43,7 @@ body {
   border-radius: 4px;
   padding: 8px 12px;
   position: absolute;
-  top: 100px;
+  top: 50px;
 }
 
 .toggle:focus {
@@ -60,6 +60,7 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
+  top: 50px;
 }
 .needle {
   background-color: var(--primary-color);
@@ -69,6 +70,7 @@ body {
   height: 65px;
   width: 3px;
   transform-origin: bottom center;
+  transition: all 0.5s ease-in;
 }
 
 .needle.hour {
