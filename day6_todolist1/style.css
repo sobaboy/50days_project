@@ -70,3 +70,56 @@ small {
   margin-top: 3rem;
   text-align: center;
 }
+
+/* 다크모드 */
+.toggle-darkmode {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  border: 1px solid var(--foreground);
+  border-radius: 3px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+:root {
+  --color-light: #eee;
+  --color-dark: #222831;
+  --color-orange: #db6400;
+
+  --background: var(--color-light);
+  --foreground: var(--color-dark);
+}
+
+.darkmode {
+  --color-light: #eee;
+  --color-dark: #222831;
+  --color-orange: #db6400;
+
+  --background: var(--color-dark);
+  --foreground: var(--color-light);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.form {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn-orange {
+  background: var(--color-orange);
+  color: var(--color-light);
+}
