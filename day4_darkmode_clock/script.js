@@ -44,9 +44,9 @@ toggleEl.addEventListener("click", (e) => {
   }
 });
 
-// clock
 function setTime() {
   const time = new Date();
+  console.log(time);
   const month = time.getMonth();
   const day = time.getDay();
   const date = time.getDate();
@@ -94,3 +94,12 @@ const scale = (number, inMin, inMax, outMin, outMax) => {
 setTime();
 
 setInterval(setTime, 1000);
+
+/**
+ * 해결해야할 부분
+ * 1. 초침이 정각에 오면 한바뀌 돌은 후 현재 분이 맞춰짐
+ * 2. 반응형으로 구현 해야 함
+ * 3. 스토리지에 현재 모드상태가 저장 되도록 해야함
+ * 4. 마지막 모드 상태를 유지하도록해야함
+ *
+ */

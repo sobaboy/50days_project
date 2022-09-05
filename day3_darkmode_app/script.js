@@ -3,9 +3,12 @@ const toggleText = document.querySelector(".toggle-text");
 
 let darkMode = localStorage.getItem("darkMode");
 
-// 다크모드 셋팅하기
-
-// darkmode 클래스 추가 및 Light 텍스트 추가
+/**
+ * // 다크모드 셋팅하기
+ * darkmode 클래스 추가 및 Light 텍스트 추가
+ * darkmode 일 때와 lightmode 일 떄의 상태를 각각 로컬에 저장하기 위해서 if / else 문으로 묶지 않고 따로 선언해줌
+ * 
+ */
 
 const enableDarkMode = () => {
   document.body.classList.add("darkmode");
