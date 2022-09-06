@@ -8,7 +8,6 @@
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 const todosUL = document.getElementById("todos");
-
 const todos = JSON.parse(localStorage.getItem("todos"));
 
 if (todos) {
@@ -67,20 +66,13 @@ function updateLS() {
 /**
  *
  * ★ 다크모드 설정
- *
+ * 변경하지 않는 값(상수)이라면 let 보다는 const 키워드를 사용하는 것이 안전하다.
  * */
 
 const toggleDarkMode = document.querySelector(".toggle-darkmode");
 const toggleText = document.querySelector(".toggle-text");
 
 let darkMode = localStorage.getItem("darkMode");
-
-/**
- * // 다크모드 셋팅하기
- * darkmode 클래스 추가 및 Light 텍스트 추가
- * darkmode 일 때와 lightmode 일 떄의 상태를 각각 로컬에 저장하기 위해서 if / else 문으로 묶지 않고 따로 선언해줌
- *
- */
 
 const enableDarkMode = () => {
   document.body.classList.add("darkmode");
@@ -108,3 +100,41 @@ toggleDarkMode.addEventListener("click", () => {
     disableDarkMode();
   }
 });
+
+// 텍스트 복사기능
+const copyTxt = document.querySelector("input[name=copyTxt]");
+const finalTxt = document.querySelector("input[name=finalTxt]");
+const moverBtn = document.querySelector(".moverBtn");
+const copyBtn = document.querySelector(".copyBtn");
+const output = document.querySelector(".output");
+
+moverBtn.addEventListener("click", moverText);
+copyBtn.addEventListener("click", copyText);
+finalTxt.addEventListener("click", selAll);
+copyTxt.addEventListener("click", selAll);
+
+function selAll() {
+  this.select();
+}
+
+function moverText() {
+  let temp = copyTxt.value;
+  finalTxt.value = temp;
+}
+
+function copyText() {
+  let temp = copyTxt.value;
+  copytoClipBoard(temp);
+}
+
+function copytoClipBoard(str) {
+  const textarea = document.createElement("textarea");
+  console.log(textarea);
+
+  textarea.value = str;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+  output.innerHTML = "<h3>텍스트가 복사되었습니다</h3>" + textarea.value;
+}

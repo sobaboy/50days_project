@@ -8,7 +8,7 @@
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"
     ></script>
-    <title>My Project</title>
+    <title>할 일을 해라!</title>
   </head>
   <body>
     <!-- <h1>할일 목록</h1> -->
@@ -21,7 +21,12 @@
         autocomplete="off"
       />
 
-      <ul class="todos" id="todos">
+      <ul class="todos copyTxt" id="todos">
+        <textarea name="copyTxt" cols="50" rows="3"></textarea>
+        <button class="moverBtn">텍스트 옮기기</button>
+        <button class="copyBtn">텍스트 복사</button>
+        <textarea name="finalTxt" rows="3" cols="50"></textarea>
+        <div class="output"></div>
         <!-- <li>첫번째 할 일</li>
         <li class="completed">두번째 할 일</li> -->
       </ul>
