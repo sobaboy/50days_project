@@ -123,3 +123,9 @@ body {
   background: var(--color-orange);
   color: var(--color-light);
 }
+
+/* 복사버튼 */
+form .btn {
+  position: absolute;
+  right: 30px;
+}

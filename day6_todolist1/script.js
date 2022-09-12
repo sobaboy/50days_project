@@ -1,9 +1,4 @@
-/**
- *
- * todo 리스트
- *
- *
- */
+// todo List
 
 const form = document.getElementById("form");
 const input = document.getElementById("input");
@@ -63,11 +58,7 @@ function updateLS() {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-/**
- *
- * ★ 다크모드 설정
- * 변경하지 않는 값(상수)이라면 let 보다는 const 키워드를 사용하는 것이 안전하다.
- * */
+// Dark mode
 
 const toggleDarkMode = document.querySelector(".toggle-darkmode");
 const toggleText = document.querySelector(".toggle-text");

@@ -13,8 +13,16 @@
   <body>
     <!-- <h1>할일 목록</h1> -->
     <form id="form" class="form">
+      <!-- <input
+        type="text"
+        class="input"
+        id="input"
+        placeholder="할 일을 입력하세요"
+        autocomplete="off"
+      /> -->
       <input
         type="text"
+        name="copyTxt"
         class="input"
         id="input"
         placeholder="할 일을 입력하세요"
@@ -22,15 +30,16 @@
       />
 
       <ul class="todos copyTxt" id="todos">
-        <textarea name="copyTxt" cols="50" rows="3"></textarea>
-        <button class="moverBtn">텍스트 옮기기</button>
-        <button class="copyBtn">텍스트 복사</button>
-        <textarea name="finalTxt" rows="3" cols="50"></textarea>
-        <div class="output"></div>
         <!-- <li>첫번째 할 일</li>
         <li class="completed">두번째 할 일</li> -->
       </ul>
     </form>
+
+    <div class="output"></div>
+    <div class="btn">
+      <button class="moverBtn">텍스트 옮기기</button>
+      <button class="copyBtn">텍스트 복사</button>
+    </div>
     <small
       >완료한 할 일은 왼쪽 마우스를 클릭하세요. <br />
       삭제하려면 오른쪽 마우스를 클릭하세요.
